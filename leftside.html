@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <title></title>
+<style>
+body{
+      margin: 0;
+      padding: 0;
+  }
+
+a{
+      color: #ffffff;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+h1,h2,h3,h4,h5,h6{
+      margin:0;
+  }
+
+button{
+      outline: none;
+      border: none;
+      cursor: pointer;
+      color: #ffffff;
+  }
+
+p{
+      margin-top: 0;
+  }
+
+textarea{
+      font-family: "Helvetica Neue", sans-serif;
+  }
+
+.search-inp{
+      position: relative;
+  }
+
+.search-inp input{
+      width: 550px;
+      padding: 9px 40px;
+      border-radius: 3px;
+      outline: none;
+      border: none;
+  }
+
+.search-inp i.search-icon{
+      background-image: url("./images/Component 1 – 1.svg");
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 9px;
+      left: 12px;
+      background-size: cover;
+  }
+
+.profile{
+      display: flex;
+  }
+
+.profile-sidebar{
+     display: flex;
+     flex-direction:column;
+     width: 269px;
+     height: 100%;
+ }
+
+ .brief-profile-info{
+     display: flex;
+     margin-top: 80px;
+     flex-direction:column;
+     align-self: center;
+ }
+
+ .brief-profile-info .profile-image-mini{
+     object-fit: cover;
+     width: 116.5px;
+     height: 116.2px;
+     align-self: center;
+     border-radius: 58.1px;
+     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+ }
+
+ .brief-profile-content{
+     text-align:center;
+     margin-top:14.8px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .brief-profile-content .brief-profile-name{
+     font-size: 26px;
+     font-weight: 600;
+     letter-spacing: 0.44px;
+     color: #2d2d2d;
+     font-family: proxima_novasemibold, sans-serif;
+ }
+
+ .brief-profile-content .brief-profile-name>span{
+     font-family: proxima_novaregular, sans-serif;
+     font-weight: 400;
+ }
+
+ .brief-profile-content .brief-profile-position{
+     font-size: 13px;
+     letter-spacing: 0.22px;
+     color: #999999;
+     font-family: proxima_novasemibold, sans-serif;
+ }
+
+ .brief-profile-content .brief-profile-open-status{
+     font-size: 11px;
+     letter-spacing: 0.19px;
+     color: #999999;
+ }
+
+ .brief-profile-content .brief-profile-open-status>span{
+     color: #33da38;
+     font-weight: 600;
+ }
+
+ .profile-sidebar>hr{
+     margin-top:12.5px;
+     align-self:center;
+     width: 80%;
+     border: 0.5px solid #f1f1f1;
+ }
+.Connection-followers{
+  display:flex;
+  flex-direction:row;
+  margin-top:5.5px;
+}
+.Connections{
+  display:flex;
+  flex-direction:column;
+  margin-left:52px;
+}
+.Connections span{
+  align-self:center;
+}
+.Followers{
+  display:flex;
+  flex-direction:column;
+  margin-left:37px;
+}
+.connection-value, .follower-value{
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.31px;
+  align-self: center;
+  color: #2d2d2d;
+}
+.connection, .follower{
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  align-self: center;
+  color: #9b9b9b;
+}
+.profile-sidebar-tabs>div.connections-drop-down{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+}
+
+.profile-sidebar-tabs>div.connections-drop-down:hover{
+    background-color: white;
+}
+
+.profile-sidebar-tabs>div,.profile-sidebar-tabs>div.connections-drop-down>div{
+    padding: 12px 39px;
+    display: flex;
+    transition: all 0.3s linear;
+}
+
+.profile-sidebar-tabs>div:hover,.profile-sidebar-tabs>div.connections-drop-down>div:hover{
+    background-color: #f8f8f8;
+}
+
+.profile-sidebar-tabs>div>i{
+    width: 18px;
+    height: 18px;
+    background-size: cover;
+
+}
+
+.profile-sidebar-tabs>div>span,.profile-sidebar-tabs>div.connections-drop-down>div>span{
+    margin-left: 39px;
+    color: #b8b8b8;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: proxima_novasemibold, sans-serif;
+}
+
+.profile-sidebar-tabs>div.connections-drop-down>div>span{
+    margin-left: 59px;
+}
+.profile-sidebar-tabs .feed>i{
+    background-image: url("Feed.png");
+}
+.profile-sidebar-tabs .explore>i{
+    background-image: url("Component3.png");
+}
+.profile-sidebar-tabs .notifications>i{
+    background-image: url("NotificationBell.png");
+}
+.profile-sidebar-tabs .connections>i{
+    background-image: url("MyConnections.png");
+}
+.profile-sidebar-tabs .crowdfunding>i{
+    background-image: url("Crowdfunding.png");
+}
+.profile-sidebar-tabs .settings>i{
+    background-image: url("Settings2.png");
+}
+.profile-sidebar-end{
+    margin-top: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-sidebar-end .start-team-link{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: proxima_novasemibold, sans-serif;
+}
+
+.profile-sidebar-end .start-team-link>i{
+    background-image: url("StartaTeam.png");
+    width: 35px;
+    height: 18px;
+    background-size: cover;
+}
+
+.profile-sidebar-end .start-team-link>a{
+    color: #f86d3a;
+    margin-left: 24px;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <section class="profile-sidebar">
+       <div class="brief-profile-info">
+           <img class="profile-image-mini" src="Image2.jpg" alt="#"/>
+           <div class="brief-profile-content">
+             <span class="brief-profile-name">Luke <span>Hobbs</span></span>
+             <span class="brief-profile-position">Director & CEO at company.co</span>
+             <span class="brief-profile-open-status"><span>Open</span> for Internships</span>
+           </div>
+         </div>
+         <hr/>
+         <div class="Connection-followers">
+            <div class="Connections">
+              <span class="connection-value">200</span>
+              <span class="connection">Connections</span>
+            </div>
+            <div class="Followers">
+              <span class="follower-value">200</span>
+              <span class="follower">Followers</span>
+            </div>
+         </div>
+         <hr />
+         <div class="profile-sidebar-tabs">
+           <div class="feed">
+               <i class="fas"> </i>
+               <span >Feed</span>
+           </div>
+           <div class="explore" >
+               <i class="fas"> </i>
+               <span >Explore</span>
+           </div>
+           <div class="notifications" >
+               <i class="fas"> </i>
+               <span>Notifications</span>
+           </div>
+           <div class="connections" >
+               <i class="fas"> </i>
+               <span >My Connections</span>
+           </div>
+           <div class="connections-drop-down">
+               <div class="groups">
+                   <i class="fas"> </i>
+                   <span>Groups</span>
+               </div>
+               <div class="communitites">
+                   <i class="fas"> </i>
+                   <span>Communities</span>
+               </div>
+           </div>
+           <div class="crowdfunding" >
+               <i class="fas"> </i>
+               <span >Crowdfunding</span>
+           </div>
+           <div class="settings" >
+               <i class="fas"> </i>
+               <span >Settings</span>
+           </div>
+       </div>
+       <div class="profile-sidebar-end">
+           <div class="start-team-link">
+               <i class="fas"> </i>
+               <a href="/">START A TEAM</a>
+           </div>
+      </div>
+   </section>
+  </body>
+</html>
